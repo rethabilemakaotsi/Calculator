@@ -1,98 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: darkgrey;
-            text-align: center;
-        }
-
-        .calculator {
-            width: 300px;
-            margin: 0 auto;
-            background-color: #25787f;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            height: 40px;
-            margin-bottom: 10px;
-            font-size: 18px;
-            padding: 5px;
-        }
-
-        input[type="button"] {
-            color: grey;
-            width: 48px;
-            height: 48px;
-            font-size: 20px;
-            margin: 2px;
-            
-        }
-
-        #result {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="result" readonly>
-        <input type="button" value="1" onclick="appendToResult('1')">
-        <input type="button" value="2" onclick="appendToResult('2')">
-        <input type="button" value="3" onclick="appendToResult('3')">
-        <input type="button" value="+" onclick="appendToResult('+')">
-        <br>
-        <input type="button" value="4" onclick="appendToResult('4')">
-        <input type="button" value="5" onclick="appendToResult('5')">
-        <input type="button" value="6" onclick="appendToResult('6')">
-        <input type="button" value="-" onclick="appendToResult('-')">
-        <br>
-        <input type="button" value="7" onclick="appendToResult('7')">
-        <input type="button" value="8" onclick="appendToResult('8')">
-        <input type="button" value="9" onclick="appendToResult('9')">
-        <input type="button" value="*" onclick="appendToResult('*')">
-        <br>
-        <input type="button" value="C" onclick="clearResult()">
-        <input type="button" value="0" onclick="appendToResult('0')">
-        <input type="button" value="=" onclick="calculateResult()">
-        <input type="button" value="/" onclick="appendToResult('/')">
+
+    <div id="maincontainer">
+        <div id="input">
+            <input type="text" name="" id="userinput">
+        </div>
+        <div>
+            <div id="btn-container">
+                <button id="clear">clear</button>
+                <button id="del">Delete</button>
+                
+                <button>.</button>
+                <button id="divide">/</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button id="multiple">*</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button id="sub">-</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button id="add">+</button>
+                <button>0</button>
+                <button>(</button>
+                <button>)</button>
+                <button id="equal">=</button>
+            </div>
+        </div>
     </div>
-
-    <script>
-        function appendToResult(value) {
-            document.getElementById("result").value += value;
-        }
-
-        function clearResult() {
-            document.getElementById("result").value = "";
-        }
-
-        function calculateResult() {
-            try {
-                document.getElementById("result").value = eval(document.getElementById("result").value);
-            } catch (error) {
-                document.getElementById("result").value = "Error";
-            }
-        }
-    </script>
-
-        
-         
-        
-
-
-
+    
 </body>
 </html>
-
-
-    
-      
-    
